@@ -1,0 +1,22 @@
+{
+    "name": "Telegram Math Game Helper",
+    "version": "1.0",
+    "description": "This plugin allows user to get the results of the calculations given by the Math Telegram Game",
+    "manifest_version": 2,
+
+    "permissions": [
+        "tabs",
+        "https://tbot.xyz/math/*"
+    ],
+
+    "browser_action":{
+        "default_title": "Calculate"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["https://tbot.xyz/math/*"],
+            "js": ["script.js"]
+        }
+    ]
+}
